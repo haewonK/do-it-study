@@ -14,3 +14,4 @@ int main(void) {
    cout<<sum<<endl;
    return 0;
 }
+
