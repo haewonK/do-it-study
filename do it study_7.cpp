@@ -2,7 +2,8 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
-
+ //두잇 7번 투포인터 2  ,백준 1940 
+ 
 int main(void) {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
