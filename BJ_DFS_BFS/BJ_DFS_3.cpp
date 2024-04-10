@@ -32,7 +32,7 @@ for(int i=0;i<N;i++){
 for(int i=0;i<N;i++){
     for(int j=0;j<N;j++){
         if(Map[i][j]==1&&!visited[i][j]) {
-            depth++;
+            depth++; //첫칸넣어주는거 잊지말기 
             chk[i][j]=depth;
             Ans[depth]+=1;
             BFS(i,j);
