@@ -29,7 +29,10 @@ void dfs(int pos){
         if(ret>candi){
             ret=candi;
         }
+<<<<<<< HEAD
         
+=======
+>>>>>>> 62ae04546c8777fbeb78bde885c964e6d71fe10d
         return;
     }
 
