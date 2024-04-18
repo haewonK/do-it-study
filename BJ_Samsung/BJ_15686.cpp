@@ -10,27 +10,25 @@ using namespace std;
 struct POSI{
     int x,y;
 };
-int ret=1000000;
+int ret=0;
 int n,m,type;
 vector<POSI> house, shop, pick;
 void dfs(int pos){
     if(pick.size()==m){ //m개만큼의 치킨집에 골라져 pick 배열에 들어간 상황 
         
-        /*
-        int min=0;
-        for(int a=0;a<pick.size();a++){
-            for(int b=0;b<house.size();b++){
-                min+=abs(pick[a].x-house[b].x)+abs(pick[a].y-house[b].y);
+        int candi =0;
+        for(int i=0;i<house.size();i++){
+            int min_d=1000000;
+            for(int j=0;j<pick.size();j++){ // 각 집마다 가장 가까운 치킨집과의 거리만 모아야함 
+                min_d=min(min_d,abs(house[i].x-pick[j].x)+abs(house[i].y-pick[j].y));
+
             }
+            //한 집과 최소가되는 치킨집과의 거리 저장됨 
+            candi+=min_d;
         }
-        */
-        
-
-
-
-
-        if(ret>min) ret=min;
-        
+        if(ret>candi){
+            ret=candi;
+        }
         
         return;
     }
